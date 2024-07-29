@@ -6,9 +6,11 @@ class ChocolateBoiler private constructor() {
     private var boiled: Boolean = false
 
     companion object {
-        private var instance: ChocolateBoiler? = null
-        fun getInstance(): ChocolateBoiler {
-            return instance ?: ChocolateBoiler()
+        private var instance: ChocolateBoiler = ChocolateBoiler()
+
+        @Synchronized
+         fun getInstance(): ChocolateBoiler {
+            return instance
         }
     }
 
