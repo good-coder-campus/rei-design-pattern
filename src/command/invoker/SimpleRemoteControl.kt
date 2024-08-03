@@ -1,4 +1,4 @@
-package command.client
+package command.invoker
 
 import command.Command
 

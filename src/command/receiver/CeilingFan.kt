@@ -1,4 +1,4 @@
-package command.invoker
+package command.receiver
 
 class CeilingFan(
     private val location: String

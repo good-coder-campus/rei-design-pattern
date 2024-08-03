@@ -1,9 +1,10 @@
 package command.client
 
-import command.invoker.GarageDoor
+import command.receiver.GarageDoor
 import command.GarageDoorOpenCommand
-import command.invoker.Light
+import command.receiver.Light
 import command.LightOnCommand
+import command.invoker.SimpleRemoteControl
 
 class RemoteControlTest {
     fun main() {

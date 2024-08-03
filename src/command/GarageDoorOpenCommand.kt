@@ -1,6 +1,6 @@
 package command
 
-import command.invoker.GarageDoor
+import command.receiver.GarageDoor
 
 class GarageDoorOpenCommand(
     private val garageDoor: GarageDoor

@@ -1,6 +1,6 @@
 package command
 
-import command.invoker.Stereo
+import command.receiver.Stereo
 
 class StereoOffWithCDCommand(
     private val stereo: Stereo

@@ -1,6 +1,6 @@
 package command
 
-import command.invoker.CeilingFan
+import command.receiver.CeilingFan
 
 class CeilingFanHighCommand(
     private val ceilingFan: CeilingFan

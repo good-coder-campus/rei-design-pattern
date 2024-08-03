@@ -1,6 +1,6 @@
 package command
 
-import command.invoker.Light
+import command.receiver.Light
 
 class LightOnCommand(private val light: Light) : Command {
 
