@@ -8,7 +8,7 @@ class Singleton private constructor() {
 
         fun getInstance(): Singleton {
             return instance ?: synchronized(Singleton::class.java) {
-               instance = Singleton()
+                instance = Singleton()
                 instance!!
             }
 
