@@ -9,4 +9,8 @@ class GarageDoorOpenCommand(
     override fun execute() {
         garageDoor.up()
     }
+
+    override fun undo() {
+        garageDoor.down()
+    }
 }

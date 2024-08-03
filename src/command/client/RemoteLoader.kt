@@ -31,15 +31,14 @@ class RemoteLoader {
         remote.setCommand(3, stereoOnWithCD, stereoOff)
 
         println(remote)
-
         remote.onButtonWasPushed(0)
         remote.offButtonWasPushed(0)
-        remote.onButtonWasPushed(1)
-        remote.offButtonWasPushed(1)
-        remote.onButtonWasPushed(2)
-        remote.offButtonWasPushed(2)
-        remote.onButtonWasPushed(3)
-        remote.offButtonWasPushed(3)
+        println(remote)
+        remote.undoButtonWasPushed()
+        remote.offButtonWasPushed(0)
+        remote.onButtonWasPushed(0)
+        println(remote)
+        remote.undoButtonWasPushed()
     }
 }
 
