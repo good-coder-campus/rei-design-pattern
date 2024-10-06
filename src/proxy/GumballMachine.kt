@@ -1,15 +1,21 @@
-package state
+package proxy
+
+import java.rmi.Naming
+import java.rmi.server.UnicastRemoteObject
 
 class GumballMachine(
     var count: Int = 0,
     val location: String
-) {
+) : UnicastRemoteObject(), GumballMachineRemote {
+    companion object {
+        private const val serialVersionUID = 2L
+    }
     val soldOutState : State
     val noQuarterState : State
     val hasQuarterState : State
     val soldState : State
     var winnerState: State
-    var state: State
+     var state: State
 
     init {
         soldOutState = SoldOutState(this)
@@ -51,19 +57,10 @@ class GumballMachine(
 }
 
 fun main() {
-    val gumballMachine = GumballMachine(5, "서울")
-
-    println(gumballMachine)
-    gumballMachine.insertQuarter()
-    gumballMachine.turnCrank()
-
-    println(gumballMachine)
-
-    gumballMachine.insertQuarter()
-    gumballMachine.turnCrank()
-    gumballMachine.insertQuarter()
-    gumballMachine.turnCrank()
-
-    println(gumballMachine)
+   runCatching {
+       val count = 5
+         val machine = GumballMachine(count, "서울")
+       Naming.rebind("gumballmachine", machine)
+   }
 
 }
